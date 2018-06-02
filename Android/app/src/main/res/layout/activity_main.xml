@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="guterman.alon.remotecontrolledcar.MainActivity"
+    android:weightSum="1">
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/frameLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/textView_MessagesRecv"
+        android:layout_alignParentLeft="true"
+        android:layout_toLeftOf="@+id/textView_MessagesRecv">
+
+    </FrameLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text2"
+        android:text="y_Axis: "
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/textView_MessagesRecv"
+        android:layout_toEndOf="@+id/frameLayout"
+        android:layout_toRightOf="@+id/frameLayout" />
+    <!--
+        android:layout_alignBaseline="@+id/button3"
+        android:layout_alignBottom="@+id/button3"
+        -->
+
+    <!--
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_Connect"
+            android:onClick="ConnectToBlueToothDevice"
+            android:id="@+id/button3"
+            android:layout_alignBaseline="@+id/textView_MessagesRecv"
+            android:layout_alignBottom="@+id/textView_MessagesRecv"
+            android:layout_alignStart="@+id/button" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_Disconnect"
+            android:onClick="DisconnectToBlueToothDevice"
+            android:id="@+id/button"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/SeekBar" />
+    -->
+    <SeekBar
+        android:id="@+id/SeekBar"
+        android:layout_width="280sp"
+        android:layout_height="wrap_content"
+        android:rotation="270"
+        android:max="100"
+        android:progress="1"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="110dp"
+        android:layout_marginRight="-115dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_SeekBar"
+        android:text="SeekBar: "
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true" />
+    <!--android:layout_alignBottom="@+id/button"-->
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_MessagesRecv"
+        android:text="Messages Recv: "
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/textView_SeekBar"
+        android:layout_toEndOf="@+id/webView"
+        android:layout_toRightOf="@+id/webView" />
+
+    <WebView
+        android:layout_width="387dp"
+        android:layout_height="fill_parent"
+        android:id="@+id/webView"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stop"
+        android:id="@+id/StopButton"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/text2"
+        android:layout_alignEnd="@+id/textView_MessagesRecv"
+        android:layout_alignLeft="@+id/text2"
+        android:layout_alignRight="@+id/textView_MessagesRecv" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/xAxis"
+        android:text="x_Axis: "
+        android:textStyle="bold"
+        android:textIsSelectable="true"
+        android:layout_below="@+id/text2"
+        android:layout_alignStart="@+id/text2"
+        android:layout_alignLeft="@+id/text2" />
+    <!--
+        android:layout_below="@+id/button"
+        android:layout_alignEnd="@+id/button" />
+-->
+
+</RelativeLayout>
